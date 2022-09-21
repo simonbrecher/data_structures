@@ -6,8 +6,8 @@ namespace DataStructures {
     class Dictionary {
         private static Random random = new Random();
 
-        public static uint MIN_CAPACITY = 1 << 3;
-        public static uint MAX_CAPACITY = (uint) 1 << 31;
+        private static uint MIN_CAPACITY = 1 << 3;
+        private static uint MAX_CAPACITY = (uint) 1 << 31;
 
         public static float MAX_SEARCH_SIZE = 0.85f;
         public static float MAX_SIZE = 0.7f;
@@ -15,17 +15,17 @@ namespace DataStructures {
 
         // f(x, i) := ( A*x + B*x*i ) % Capacity;
         // if B*x would be even, it is increased by 1
-        public uint HASH_CONST_A;
-        public uint HASH_CONST_B;
+        private uint HASH_CONST_A;
+        private uint HASH_CONST_B;
 
-        public uint Capacity; // number of cells
-        public uint SearchSize; // number of true values in WasUsed
+        private uint Capacity; // number of cells
+        private uint SearchSize; // number of true values in WasUsed
         public uint Size; // number of true values in IsUsed
 
-        public int[] Keys;
-        public int[] Values;
-        public bool[] IsUsed;
-        public bool[] WasUsed;
+        private int[] Keys;
+        private int[] Values;
+        private bool[] IsUsed;
+        private bool[] WasUsed;
 
         public Dictionary() {
             Capacity = MIN_CAPACITY;

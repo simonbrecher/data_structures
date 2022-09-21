@@ -5,14 +5,14 @@ namespace DataStructures
     // AVL tree. Should be used as a set. Can contain only int.
     class BinaryTree
     {
-        public static BinaryTree EMPTY;
+        private static BinaryTree EMPTY;
         
-        public bool HasKey; // false:   only for BinaryTree.EMPTY   or   root vertex of empty tree
-        public int Key;
+        private bool HasKey; // false:   only for BinaryTree.EMPTY   or   root vertex of empty tree
+        private int Key;
         public int Depth; // -1: empty tree ; X: longest path from root
         public int Size; // number of vertices
-        public BinaryTree Left = EMPTY;
-        public BinaryTree Right = EMPTY;
+        private BinaryTree Left = EMPTY;
+        private BinaryTree Right = EMPTY;
 
         // Create static representation of empty tree. (Used for unexisting children.)
         static BinaryTree() {
